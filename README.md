@@ -1,6 +1,7 @@
 # C++ Playground
 
-This repository is a personal C++ playground built with CMake.  
+This repository is a personal C++ playground built with CMake.
+
 It is intended for experimenting with C++ syntax, standard library features, algorithms, design patterns, and small test programs.
 
 ## Purpose
@@ -15,7 +16,8 @@ The goal of this project is to provide a simple sandbox for learning, testing, a
 - Small algorithmic exercises and problem-solving experiments
 - Code snippets, tests, and quick prototypes
 
-This project is not focused on building one final application.  
+This project is not focused on building one final application.
+
 Instead, it is meant to be a clean and expandable workspace for practicing and exploring C++.
 
 ## Build Instructions
@@ -33,3 +35,54 @@ From the root directory of the project:
 ```bash
 cmake -S . -B build
 cmake --build build
+```
+
+### Run
+
+Depending on the generator and operating system, the executable may be located in different places.
+
+Linux/macOS:
+
+```bash
+./build/MyApp
+```
+
+Windows with MinGW or similar:
+
+```bash
+./build/MyApp.exe
+```
+
+Windows with Visual Studio generator:
+
+```bash
+./build/Debug/MyApp.exe
+```
+
+or for Release builds:
+
+```bash
+./build/Release/MyApp.exe
+```
+
+## Project Structure
+
+```text
+playground-for-cpp/
+├── src/             # Source files (.cpp)
+├── include/         # Header files (.h/.hpp)
+├── libraries/       # External or experimental libraries
+├── CMakeLists.txt   # CMake build configuration
+└── README.md        # Project description
+```
+
+## Notes
+
+- Header files should usually go into the `include/` directory.
+- Source files should usually go into the `src/` directory.
+- The `libraries/` directory can be used later for external libraries or larger separated modules.
+- The project is intentionally simple and can be expanded as needed.
+
+## Author
+
+[ruspio](https://github.com/ruspio)
