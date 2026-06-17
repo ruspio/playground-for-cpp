@@ -13,6 +13,7 @@
 
 #if ENABLE_COFFEE_EXAMPLE
 #include "basiccoffee.h"
+#include "milkdecorator.h"
 #endif
 
 int main() {
@@ -37,9 +38,10 @@ int main() {
 
     #if ENABLE_COFFEE_EXAMPLE
     //  Simple decorator exercise - Coffee products
-    std::unique_ptr<IProduct> product = std::make_unique<BasicCoffee>();
+    std::unique_ptr<IProduct> product = 
+        std::make_unique<MilkDecorator>(std::make_unique<BasicCoffee>());
     
-    std::cout << product->getDescription() << " price: " << product->getPrice() << std::endl;
+    std::cout << product->getDescription() << " -> price: " << product->getPrice() << std::endl;
     #endif
 
     return 0;

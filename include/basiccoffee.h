@@ -12,7 +12,7 @@ private:
 public:
     BasicCoffee() 
         : description("Basic Coffee"),
-         price(8.f) {
+         price(8.0) {
     }
 
     double getPrice() const override { return price; };
