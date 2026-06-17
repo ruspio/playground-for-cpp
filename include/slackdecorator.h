@@ -5,9 +5,9 @@
 
 #include "notifierdecorator.h"
 
-class SmsDecorator : public NotifierDecorator {
+class SlackDecorator : public NotifierDecorator {
 public:
-    explicit SmsDecorator(std::unique_ptr<Notifier> notifier)
+    explicit SlackDecorator(std::unique_ptr<Notifier> notifier)
         : NotifierDecorator(std::move(notifier)) {}
 
     void send(const std::string& message) override;
