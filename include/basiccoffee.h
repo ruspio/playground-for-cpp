@@ -15,6 +15,6 @@ public:
          price(8.0) {
     }
 
-    double getPrice() const override { return price; };
-    std::string getDescription() const override { return description; };
+    double getPrice() const override { return price; }
+    std::string getDescription() const override { return description; }
 };

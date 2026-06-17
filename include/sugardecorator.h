@@ -5,12 +5,12 @@
 #include <memory>
 #include <utility>
 
-class MilkDecorator final : public ProductDecorator {
+class SugarDecorator final : public ProductDecorator {
 private:
-    static constexpr double additionalPrice{2.0};
+    static constexpr double additionalPrice{0.5};
 
 public:
-    explicit MilkDecorator(std::unique_ptr<IProduct> product)
+    explicit SugarDecorator(std::unique_ptr<IProduct> product)
         : ProductDecorator(std::move(product)) {}
 
     double getPrice() const override;
